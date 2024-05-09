@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Monitoring System</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom CSS for footer and navbar */
+    html, body {
+      height: 100%;
+    }
+    .navbar {
+      background-color: #a32036 !important; /* Change navbar background color */
+    }
+    .navbar .navbar-brand, .navbar .navbar-nav .nav-link {
+      color: rgb(13, 11, 11); /* Change navbar text color */
+    }
+    .footer {
+      background-color: #0d0e0f; /* Change footer background color */
+      color: #e9edf1; /* Change footer text color */
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    /* Custom CSS for form elements */
+    .form-control-sm {
+      width: 200px; /* Adjust the width as needed */
+    }
+    /* Custom CSS for button */
+    .btn-custom {
+      background-color: #28a745; /* Change button background color to green */
+      border-color: #28a745; /* Change button border color to green */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><b>Student Monitoring System</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto"> <!-- Changed ml-auto to mr-auto -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Student
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="student_add.html">Add Student</a>
+            <a class="dropdown-item" href="parent_add.html">Add parents</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="teacher_add.html">Add teachers</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="student_details.html">Student Details</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="attendance_add.html" id="navbarSDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Attendance
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="attendance_view.html">Attendance View</a>
+            </div>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="student_billing.html">SF Billing</a>
+          </li>
+      </ul>
+      <!-- Logout Link -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Main Content -->
+  <center>
+  <div class="container mt-4">
+    <!-- Student Details Form -->
+    <h2>Add Student</h2>
+    <form>
+      <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" class="form-control form-control-sm" id="studentName" placeholder="Enter student name">
+      </div>
+      <div class="form-group">
+        <label for="studentID">Student ID</label>
+        <input type="text" class="form-control form-control-sm" id="studentID" placeholder="Enter student ID">
+      </div>
+      <div class="form-group">
+        <label for="studentDOB">Date of Birth</label>
+        <input type="date" class="form-control form-control-sm" id="studentDOB">
+      </div>
+      <div class="form-group">
+        <label for="studentGrade">Grade</label>
+        <input type="text" class="form-control form-control-sm" id="studentGrade" placeholder="Enter student grade">
+      </div>
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+  </div>
+  </center>
+
+  <!-- Footer -->
+  <footer class="footer py-3">
+    <div class="container text-center">
+      <span class="text-muted">© 2024 Student Monitoring System</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

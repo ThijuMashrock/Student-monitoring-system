@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-image: url('background.jpg'); /* Replace 'background.jpg' with your image path */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-form {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    /* Custom button color */
+    .btn-custom {
+      background-color: #007bff; /* Change to your desired color */
+      border-color: #007bff; /* Change to your desired color */
+    }
+
+    /* Custom button hover color */
+    .btn-custom:hover {
+      background-color: #0056b3; /* Change to your desired hover color */
+      border-color: #0056b3; /* Change to your desired hover color */
+    }
+
+    /* Profile image */
+    .profile-img {
+      width: 100px; /* Adjust width as needed */
+      height: 100px; /* Adjust height as needed */
+      border-radius: 50%; /* Make it circular */
+      margin: 0 auto 20px; /* Center the image and provide some margin */
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-form">
+  <img src="profile.jpg" alt="Profile Image" class="profile-img"> <!-- Replace 'profile.jpg' with your image path -->
+  <h2 class="text-center mb-4">Student Monitoring System</h2>
+  <form id="loginForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-custom btn-block">Login</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+  // Example JavaScript code for handling form submission (You can replace it with your own logic)
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    // Here you can perform validation and further processing
+    console.log("Username: ", username);
+    console.log("Password: ", password);
+  });
+</script>
+
+</body>
+</html>
